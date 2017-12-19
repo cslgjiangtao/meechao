@@ -1,0 +1,13 @@
+<div class="image" *ngIf="articleInfo.wxArticleTopPic.length > 0">
+    <img [src]="articleInfo.wxArticleTopPic[0]" />
+</div>
+<div class="title">{{articleInfo.wxArticleTitle}}</div>
+<div class="name">作者：{{articleInfo.author}}</div>
+<div class="detail">
+    <div *ngFor="let item of articleInfo.details">
+        <div *ngIf="item.modelType == 1" class="detail-title">{{item.modelContent}}</div>
+        <div *ngIf="item.modelType == 2" class="detail-desc">{{item.modelContent}}</div>
+        <img *ngIf="item.modelType == 3" class="detail-img" [src]="item.modelContent" />
+    </div>
+</div>
+<app-comment [id]="id" [targetType]="1" [pageAt]="0"></app-comment>

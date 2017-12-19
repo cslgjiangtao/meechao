@@ -1,0 +1,14 @@
+<div *ngIf="commentList.length > 0" class="comment-list">
+  <div *ngFor="let item of commentList" class="comment-detail">
+    <div class="comment-head clear">
+      <div class="comment-pic fl">
+        <img [src]="item.user.headPic" />
+      </div>
+      <div class="comment-name fl">{{item.user.nickname}}</div>
+    </div>
+    <div class="comment-content">{{item.content}}</div>
+  </div>
+</div>
+<div *ngIf="commentList.length == 0" class="comment-no">
+  <div class="no-text">暂时没有评论哦！！！</div>
+</div>

@@ -1,0 +1,11 @@
+<div class="list">
+    <div class="item" *ngFor="let item of itemList" >
+        <div class="image">
+            <img [src]="item.designPic" />
+            <div class="tag">{{item.baseTypeName}}</div>
+        </div>
+        <div class="content">
+            <span class="title">{{item.designTitle}}</span>
+        </div>
+    </div>
+</div>

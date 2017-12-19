@@ -1,0 +1,16 @@
+<div class="list">
+    <div class="col1">
+        <div class="article" *ngFor="let item of col1" [routerLink]="['/detail/articleDetail',item.wxArticleId]">
+            <img [src]="item.wxArticlePic" height="{{item.height}}px">
+            <div class="title">{{item.wxArticleTitle}}</div>
+            <div class="author">{{item.author}}</div>
+        </div>
+    </div>
+    <div class="col2">
+        <div class="article" *ngFor="let item of col2" [routerLink]="['/detail/articleDetail',item.wxArticleId]">
+            <img [src]="item.wxArticlePic" height="{{item.height}}px">
+            <div class="title">{{item.wxArticleTitle}}</div>
+            <div class="author">{{item.author}}</div>
+        </div>
+    </div>
+</div>
